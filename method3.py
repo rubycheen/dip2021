@@ -70,19 +70,19 @@ for x in range(0, image1.size[0]):
 
             # chanel Y
             shareY1.putpixel((x * 2, y * 2), (0,0,0,0))
-            shareY1.putpixel((x * 2 + 1, y * 2), (255,0,0,0))
-            shareY1.putpixel((x * 2, y * 2 + 1), (255,0,0,0))
+            shareY1.putpixel((x * 2 + 1, y * 2), (0,0,255,0))
+            shareY1.putpixel((x * 2, y * 2 + 1), (0,0,255,0))
             shareY1.putpixel((x * 2 + 1, y * 2 + 1), (0,0,0,0))
             if Y == 0:
                 shareY2.putpixel((x * 2, y * 2), (0,0,0,0))
-                shareY2.putpixel((x * 2 + 1, y * 2), (255,0,0,0))
-                shareY2.putpixel((x * 2, y * 2 + 1), (255,0,0,0))
+                shareY2.putpixel((x * 2 + 1, y * 2), (0,0,255,0))
+                shareY2.putpixel((x * 2, y * 2 + 1), (0,0,255,0))
                 shareY2.putpixel((x * 2 + 1, y * 2 + 1), (0,0,0,0))
             else:
-                shareY2.putpixel((x * 2, y * 2), (255,0,0,0))
+                shareY2.putpixel((x * 2, y * 2), (0,0,255,0))
                 shareY2.putpixel((x * 2 + 1, y * 2), (0,0,0,0))
                 shareY2.putpixel((x * 2, y * 2 + 1), (0,0,0,0))
-                shareY2.putpixel((x * 2 + 1, y * 2 + 1), (255,0,0,0))
+                shareY2.putpixel((x * 2 + 1, y * 2 + 1), (0,0,255,0))
 
         else:
 
@@ -119,21 +119,21 @@ for x in range(0, image1.size[0]):
                 shareM2.putpixel((x * 2, y * 2 + 1), (0,255,0,0))
                 shareM2.putpixel((x * 2 + 1, y * 2 + 1), (0,0,0,0))
 
-
-            shareY1.putpixel((x * 2, y * 2), (255,0,0,0))
+            # chanel Y
+            shareY1.putpixel((x * 2, y * 2), (0,0,255,0))
             shareY1.putpixel((x * 2 + 1, y * 2), (0,0,0,0))
             shareY1.putpixel((x * 2, y * 2 + 1), (0,0,0,0))
-            shareY1.putpixel((x * 2 + 1, y * 2 + 1), (255,0,0,0))
+            shareY1.putpixel((x * 2 + 1, y * 2 + 1), (0,0,255,0))
             if Y == 1:
                 shareY2.putpixel((x * 2, y * 2), (0,0,0,0))
-                shareY2.putpixel((x * 2 + 1, y * 2), (255,0,0,0))
-                shareY2.putpixel((x * 2, y * 2 + 1), (255,0,0,0))
+                shareY2.putpixel((x * 2 + 1, y * 2), (0,0,255,0))
+                shareY2.putpixel((x * 2, y * 2 + 1), (0,0,255,0))
                 shareY2.putpixel((x * 2 + 1, y * 2 + 1), (0,0,0,0))
             else:
-                shareY2.putpixel((x * 2, y * 2), (255,0,0,0))
+                shareY2.putpixel((x * 2, y * 2), (0,0,255,0))
                 shareY2.putpixel((x * 2 + 1, y * 2), (0,0,0,0))
                 shareY2.putpixel((x * 2, y * 2 + 1), (0,0,0,0))
-                shareY2.putpixel((x * 2 + 1, y * 2 + 1), (255,0,0,0))
+                shareY2.putpixel((x * 2 + 1, y * 2 + 1), (0,0,255,0))
 
         ## share1
         tmp=[0,0,0,0]
