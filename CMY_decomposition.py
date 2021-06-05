@@ -4,7 +4,7 @@ import random
 import sys
 
 
-image = Image.open("./pika.jpeg")
+image = Image.open("./Lenna.jpg")
 color_image = image.convert('CMYK')
 
 
