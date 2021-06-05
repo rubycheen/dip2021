@@ -15,5 +15,5 @@ for x in range(infile1.size[0]):
         outfile.putpixel((x, y), (C,M,Y,0))
 
         
-outfile.save("final3.jpg")
+outfile.save("final2.jpg")
 
