@@ -1,9 +1,9 @@
 from PIL import Image
 import sys
 
-infile1 = Image.open("shareC1.jpg")
-infile2 = Image.open("shareM2.jpg")
-infile3 = Image.open("shareY1.jpg")
+infile1 = Image.open("share1.jpg")
+infile2 = Image.open("share2.jpg")
+infile3 = Image.open("share3.jpg")
 
 outfile = Image.new('CMYK', infile1.size)
 
