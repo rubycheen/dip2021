@@ -11,8 +11,6 @@ https://github.com/Srinayan/VisualCryptography
 
 ## Team member:
 
-#### 董函
-
-#### 陳姵如 https://github.com/rubycheen
-
-#### 賴群龍
+##### 董函
+##### 陳姵如 https://github.com/rubycheen
+##### 賴群龍
