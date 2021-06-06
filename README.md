@@ -8,3 +8,8 @@ We compare three different methods to crypoto color images.
 http://citeseerx.ist.psu.edu/viewdoc/download?doi=10.1.1.457.5077&rep=rep1&type=pdf
 
 https://github.com/Srinayan/VisualCryptography
+
+## Team member:
+董函
+陳姵如 https://github.com/rubycheen
+賴群龍
