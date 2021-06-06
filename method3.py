@@ -25,159 +25,159 @@ shareY2 = Image.new("CMYK", [dimension * 2 for dimension in image2.size])
 for x in range(0, image1.size[0]):
     for y in range(0, image1.size[1]):
         pixelcolor = image1.getpixel((x, y))
-        C = pixelcolor[0]+pixelcolor[1]+pixelcolor[2]
+        C = pixelcolor[0]
         pixelcolor = image2.getpixel((x, y))
-        M = pixelcolor[0]+pixelcolor[1]+pixelcolor[2]
+        M = pixelcolor[1]
         pixelcolor = image3.getpixel((x, y))
-        Y = pixelcolor[0]+pixelcolor[1]+pixelcolor[2]
+        Y = pixelcolor[2]
 
-        dice = random.randint(0, 1)
-
-        if dice == 0:
-
-            # chanel C
+        # chanel C
+        if C < 128:
             shareC1.putpixel((x * 2, y * 2), (0,0,0,0))
             shareC1.putpixel((x * 2 + 1, y * 2), (255,0,0,0))
             shareC1.putpixel((x * 2, y * 2 + 1), (255,0,0,0))
             shareC1.putpixel((x * 2 + 1, y * 2 + 1), (0,0,0,0))
-
-            if C == 0:
-                shareC2.putpixel((x * 2, y * 2), (0,0,0,0))
-                shareC2.putpixel((x * 2 + 1, y * 2), (255,0,0,0))
-                shareC2.putpixel((x * 2, y * 2 + 1), (255,0,0,0))
-                shareC2.putpixel((x * 2 + 1, y * 2 + 1), (0,0,0,0))
-            else:
-                shareC2.putpixel((x * 2, y * 2), (255,0,0,0))
-                shareC2.putpixel((x * 2 + 1, y * 2), (0,0,0,0))
-                shareC2.putpixel((x * 2, y * 2 + 1), (0,0,0,0))
-                shareC2.putpixel((x * 2 + 1, y * 2 + 1), (255,0,0,0))
-
-            # chanel M
-            shareM1.putpixel((x * 2, y * 2), (0,255,0,0))
-            shareM1.putpixel((x * 2 + 1, y * 2), (0,0,0,0))
-            shareM1.putpixel((x * 2, y * 2 + 1), (0,0,0,0))
-            shareM1.putpixel((x * 2 + 1, y * 2 + 1), (0,255,0,0))
-            if M == 0:
-                shareM2.putpixel((x * 2, y * 2), (0,255,0,0))
-                shareM2.putpixel((x * 2 + 1, y * 2), (0,0,0,0))
-                shareM2.putpixel((x * 2, y * 2 + 1), (0,0,0,0))
-                shareM2.putpixel((x * 2 + 1, y * 2 + 1), (0,255,0,0))
-            else:
-                shareM2.putpixel((x * 2, y * 2), (0,0,0,0))
-                shareM2.putpixel((x * 2 + 1, y * 2), (0,255,0,0))
-                shareM2.putpixel((x * 2, y * 2 + 1), (0,255,0,0))
-                shareM2.putpixel((x * 2 + 1, y * 2 + 1), (0,0,0,0))
-
-            # chanel Y
-            shareY1.putpixel((x * 2, y * 2), (0,0,0,0))
-            shareY1.putpixel((x * 2 + 1, y * 2), (0,0,255,0))
-            shareY1.putpixel((x * 2, y * 2 + 1), (0,0,255,0))
-            shareY1.putpixel((x * 2 + 1, y * 2 + 1), (0,0,0,0))
-            if Y == 0:
-                shareY2.putpixel((x * 2, y * 2), (0,0,0,0))
-                shareY2.putpixel((x * 2 + 1, y * 2), (0,0,255,0))
-                shareY2.putpixel((x * 2, y * 2 + 1), (0,0,255,0))
-                shareY2.putpixel((x * 2 + 1, y * 2 + 1), (0,0,0,0))
-            else:
-                shareY2.putpixel((x * 2, y * 2), (0,0,255,0))
-                shareY2.putpixel((x * 2 + 1, y * 2), (0,0,0,0))
-                shareY2.putpixel((x * 2, y * 2 + 1), (0,0,0,0))
-                shareY2.putpixel((x * 2 + 1, y * 2 + 1), (0,0,255,0))
-
+            shareC2.putpixel((x * 2, y * 2), (0,0,0,0))
+            shareC2.putpixel((x * 2 + 1, y * 2), (255,0,0,0))
+            shareC2.putpixel((x * 2, y * 2 + 1), (255,0,0,0))
+            shareC2.putpixel((x * 2 + 1, y * 2 + 1), (0,0,0,0))
         else:
-
-            # chanel C
-            shareC1.putpixel((x * 2, y * 2), (255,0,0,0))
-            shareC1.putpixel((x * 2 + 1, y * 2), (0,0,0,0))
-            shareC1.putpixel((x * 2, y * 2 + 1), (0,0,0,0))
-            shareC1.putpixel((x * 2 + 1, y * 2 + 1), (255,0,0,0))
-
-            if C == 1:
-                shareC2.putpixel((x * 2, y * 2), (0,0,0,0))
-                shareC2.putpixel((x * 2 + 1, y * 2), (255,0,0,0))
-                shareC2.putpixel((x * 2, y * 2 + 1), (255,0,0,0))
-                shareC2.putpixel((x * 2 + 1, y * 2 + 1), (0,0,0,0))
-            else:
+            dice = random.randint(0, 1)
+            if dice == 0:
+                shareC1.putpixel((x * 2, y * 2), (0,0,0,0))
+                shareC1.putpixel((x * 2 + 1, y * 2), (255,0,0,0))
+                shareC1.putpixel((x * 2, y * 2 + 1), (255,0,0,0))
+                shareC1.putpixel((x * 2 + 1, y * 2 + 1), (0,0,0,0))
                 shareC2.putpixel((x * 2, y * 2), (255,0,0,0))
                 shareC2.putpixel((x * 2 + 1, y * 2), (0,0,0,0))
                 shareC2.putpixel((x * 2, y * 2 + 1), (0,0,0,0))
                 shareC2.putpixel((x * 2 + 1, y * 2 + 1), (255,0,0,0))
+            else:
+                shareC1.putpixel((x * 2, y * 2), (255,0,0,0))
+                shareC1.putpixel((x * 2 + 1, y * 2), (0,0,0,0))
+                shareC1.putpixel((x * 2, y * 2 + 1), (0,0,0,0))
+                shareC1.putpixel((x * 2 + 1, y * 2 + 1), (255,0,0,0))
+                shareC2.putpixel((x * 2, y * 2), (0,0,0,0))
+                shareC2.putpixel((x * 2 + 1, y * 2), (255,0,0,0))
+                shareC2.putpixel((x * 2, y * 2 + 1), (255,0,0,0))
+                shareC2.putpixel((x * 2 + 1, y * 2 + 1), (0,0,0,0))
 
-            # chanel M
+
+        # chanel M
+        if M < 128:
             shareM1.putpixel((x * 2, y * 2), (0,0,0,0))
             shareM1.putpixel((x * 2 + 1, y * 2), (0,255,0,0))
             shareM1.putpixel((x * 2, y * 2 + 1), (0,255,0,0))
             shareM1.putpixel((x * 2 + 1, y * 2 + 1), (0,0,0,0))
-            if M == 1:
+            shareM2.putpixel((x * 2, y * 2), (0,0,0,0))
+            shareM2.putpixel((x * 2 + 1, y * 2), (0,255,0,0))
+            shareM2.putpixel((x * 2, y * 2 + 1), (0,255,0,0))
+            shareM2.putpixel((x * 2 + 1, y * 2 + 1), (0,0,0,0))
+        else:
+            dice = random.randint(0, 1)
+            if dice == 0:
+                shareM1.putpixel((x * 2, y * 2), (0,0,0,0))
+                shareM1.putpixel((x * 2 + 1, y * 2), (0,255,0,0))
+                shareM1.putpixel((x * 2, y * 2 + 1), (0,255,0,0))
+                shareM1.putpixel((x * 2 + 1, y * 2 + 1), (0,0,0,0))
                 shareM2.putpixel((x * 2, y * 2), (0,255,0,0))
                 shareM2.putpixel((x * 2 + 1, y * 2), (0,0,0,0))
                 shareM2.putpixel((x * 2, y * 2 + 1), (0,0,0,0))
                 shareM2.putpixel((x * 2 + 1, y * 2 + 1), (0,255,0,0))
             else:
+                shareM1.putpixel((x * 2, y * 2), (0,255,0,0))
+                shareM1.putpixel((x * 2 + 1, y * 2), (0,0,0,0))
+                shareM1.putpixel((x * 2, y * 2 + 1), (0,0,0,0))
+                shareM1.putpixel((x * 2 + 1, y * 2 + 1), (0,255,0,0))
                 shareM2.putpixel((x * 2, y * 2), (0,0,0,0))
                 shareM2.putpixel((x * 2 + 1, y * 2), (0,255,0,0))
                 shareM2.putpixel((x * 2, y * 2 + 1), (0,255,0,0))
                 shareM2.putpixel((x * 2 + 1, y * 2 + 1), (0,0,0,0))
-
-            # chanel Y
-            shareY1.putpixel((x * 2, y * 2), (0,0,255,0))
-            shareY1.putpixel((x * 2 + 1, y * 2), (0,0,0,0))
-            shareY1.putpixel((x * 2, y * 2 + 1), (0,0,0,0))
-            shareY1.putpixel((x * 2 + 1, y * 2 + 1), (0,0,255,0))
-            if Y == 1:
+                
+        # chanel Y
+        if Y < 128:
+            shareY1.putpixel((x * 2, y * 2), (0,0,0,0))
+            shareY1.putpixel((x * 2 + 1, y * 2), (0,0,255,0))
+            shareY1.putpixel((x * 2, y * 2 + 1), (0,0,255,0))
+            shareY1.putpixel((x * 2 + 1, y * 2 + 1), (0,0,0,0))
+            shareY2.putpixel((x * 2, y * 2), (0,0,0,0))
+            shareY2.putpixel((x * 2 + 1, y * 2), (0,0,255,0))
+            shareY2.putpixel((x * 2, y * 2 + 1), (0,0,255,0))
+            shareY2.putpixel((x * 2 + 1, y * 2 + 1), (0,0,0,0))
+        else:
+            dice = random.randint(0, 1)
+            if dice == 0:
+                shareY1.putpixel((x * 2, y * 2), (0,0,0,0))
+                shareY1.putpixel((x * 2 + 1, y * 2), (0,0,255,0))
+                shareY1.putpixel((x * 2, y * 2 + 1), (0,0,255,0))
+                shareY1.putpixel((x * 2 + 1, y * 2 + 1), (0,0,0,0))
+                shareY2.putpixel((x * 2, y * 2), (0,0,255,0))
+                shareY2.putpixel((x * 2 + 1, y * 2), (0,0,0,0))
+                shareY2.putpixel((x * 2, y * 2 + 1), (0,0,0,0))
+                shareY2.putpixel((x * 2 + 1, y * 2 + 1), (0,0,255,0))      
+            else:
+                shareY1.putpixel((x * 2, y * 2), (0,0,255,0))
+                shareY1.putpixel((x * 2 + 1, y * 2), (0,0,0,0))
+                shareY1.putpixel((x * 2, y * 2 + 1), (0,0,0,0))
+                shareY1.putpixel((x * 2 + 1, y * 2 + 1), (0,0,255,0))
                 shareY2.putpixel((x * 2, y * 2), (0,0,0,0))
                 shareY2.putpixel((x * 2 + 1, y * 2), (0,0,255,0))
                 shareY2.putpixel((x * 2, y * 2 + 1), (0,0,255,0))
                 shareY2.putpixel((x * 2 + 1, y * 2 + 1), (0,0,0,0))
-            else:
-                shareY2.putpixel((x * 2, y * 2), (0,0,255,0))
-                shareY2.putpixel((x * 2 + 1, y * 2), (0,0,0,0))
-                shareY2.putpixel((x * 2, y * 2 + 1), (0,0,0,0))
-                shareY2.putpixel((x * 2 + 1, y * 2 + 1), (0,0,255,0))
 
         ## share1
-        tmp=[0,0,0,0]
-        for i in range(4):
-            tmp[i]=(shareC1.getpixel((x*2, y*2))[i]+shareM1.getpixel((x*2, y*2))[i]+shareY1.getpixel((x*2, y*2))[i])//3
-        share1.putpixel((x * 2, y * 2), tuple(tmp))
+        # tmp=[0,0,0,0]
+        # for i in range(4):
+        #     tmp[i]=(shareC1.getpixel((x*2, y*2))[i]+shareM1.getpixel((x*2, y*2))[i]+shareY1.getpixel((x*2, y*2))[i])//3
+        # share1.putpixel((x * 2, y * 2), tuple(tmp))
 
-        tmp=[0,0,0,0]
-        for i in range(4):
-            tmp[i]=(shareC1.getpixel((x*2+1, y*2))[i]+shareM1.getpixel((x*2+1, y*2))[i]+shareY1.getpixel((x*2+1, y*2))[i])//3
-        share1.putpixel((x*2+1, y*2), tuple(tmp))
+        # tmp=[0,0,0,0]
+        # for i in range(4):
+        #     tmp[i]=(shareC1.getpixel((x*2+1, y*2))[i]+shareM1.getpixel((x*2+1, y*2))[i]+shareY1.getpixel((x*2+1, y*2))[i])//3
+        # share1.putpixel((x*2+1, y*2), tuple(tmp))
 
-        tmp=[0,0,0,0]
-        for i in range(4):
-            tmp[i]=(shareC1.getpixel((x*2, y*2+1))[i]+shareM1.getpixel((x*2, y*2+1))[i]+shareY1.getpixel((x*2, y*2+1))[i])//3
-        share1.putpixel((x*2, y*2+1), tuple(tmp))
+        # tmp=[0,0,0,0]
+        # for i in range(4):
+        #     tmp[i]=(shareC1.getpixel((x*2, y*2+1))[i]+shareM1.getpixel((x*2, y*2+1))[i]+shareY1.getpixel((x*2, y*2+1))[i])//3
+        # share1.putpixel((x*2, y*2+1), tuple(tmp))
 
-        tmp=[0,0,0,0]
-        for i in range(4):
-            tmp[i]=(shareC1.getpixel((x*2+1, y*2+1))[i]+shareM1.getpixel((x*2+1, y*2+1))[i]+shareY1.getpixel((x*2+1, y*2+1))[i])//3
-        share1.putpixel((x*2+1, y*2+1), tuple(tmp))
-
+        # tmp=[0,0,0,0]
+        # for i in range(4):
+        #     tmp[i]=(shareC1.getpixel((x*2+1, y*2+1))[i]+shareM1.getpixel((x*2+1, y*2+1))[i]+shareY1.getpixel((x*2+1, y*2+1))[i])//3
+        # share1.putpixel((x*2+1, y*2+1), tuple(tmp))
+for i in range(0, share1.size[0]):
+    for j in range(0, share1.size[1]):
+        C_new = shareC1.getpixel((i, j))[0]
+        M_new = shareM1.getpixel((i, j))[1]
+        Y_new = shareY1.getpixel((i, j))[2]
+        share1.putpixel((i, j), (C_new,M_new,Y_new,0))
 
         ## share2
-        tmp=[0,0,0,0]
-        for i in range(4):
-            tmp[i]=(shareC2.getpixel((x*2, y*2))[i]+shareM2.getpixel((x*2, y*2))[i]+shareY2.getpixel((x*2, y*2))[i])//3
-        share2.putpixel((x*2, y*2), tuple(tmp))
+        # tmp=[0,0,0,0]
+        # for i in range(4):
+        #     tmp[i]=(shareC2.getpixel((x*2, y*2))[i]+shareM2.getpixel((x*2, y*2))[i]+shareY2.getpixel((x*2, y*2))[i])//3
+        # share2.putpixel((x*2, y*2), tuple(tmp))
 
-        tmp=[0,0,0,0]
-        for i in range(4):
-            tmp[i]=(shareC2.getpixel((x*2+1, y*2))[i]+shareM2.getpixel((x*2+1, y*2))[i]+shareY2.getpixel((x*2+1, y*2))[i])//3
-        share2.putpixel((x*2+1, y*2), tuple(tmp))
+        # tmp=[0,0,0,0]
+        # for i in range(4):
+        #     tmp[i]=(shareC2.getpixel((x*2+1, y*2))[i]+shareM2.getpixel((x*2+1, y*2))[i]+shareY2.getpixel((x*2+1, y*2))[i])//3
+        # share2.putpixel((x*2+1, y*2), tuple(tmp))
 
-        tmp=[0,0,0,0]
-        for i in range(4):
-            tmp[i]=(shareC2.getpixel((x*2, y*2+1))[i]+shareM2.getpixel((x*2, y*2+1))[i]+shareY2.getpixel((x*2, y*2+1))[i])//3
-        share2.putpixel((x*2, y*2+1), tuple(tmp))
+        # tmp=[0,0,0,0]
+        # for i in range(4):
+        #     tmp[i]=(shareC2.getpixel((x*2, y*2+1))[i]+shareM2.getpixel((x*2, y*2+1))[i]+shareY2.getpixel((x*2, y*2+1))[i])//3
+        # share2.putpixel((x*2, y*2+1), tuple(tmp))
 
-        tmp=[0,0,0,0]
-        for i in range(4):
-            tmp[i]=(shareC2.getpixel((x*2+1, y*2+1))[i]+shareM2.getpixel((x*2+1, y*2+1))[i]+shareY2.getpixel((x*2+1, y*2+1))[i])//3
-        share2.putpixel((x*2+1, y*2+1), tuple(tmp))
-
+        # tmp=[0,0,0,0]
+        # for i in range(4):
+        #     tmp[i]=(shareC2.getpixel((x*2+1, y*2+1))[i]+shareM2.getpixel((x*2+1, y*2+1))[i]+shareY2.getpixel((x*2+1, y*2+1))[i])//3
+        # share2.putpixel((x*2+1, y*2+1), tuple(tmp))
+for i in range(0, share2.size[0]):
+    for j in range(0, share2.size[1]):
+        C_new = shareC2.getpixel((i, j))[0]
+        M_new = shareM2.getpixel((i, j))[1]
+        Y_new = shareY2.getpixel((i, j))[2]
+        share2.putpixel((i, j), (C_new,M_new,Y_new,0))
 
 
 shareC1.save('shareC1.jpg')
