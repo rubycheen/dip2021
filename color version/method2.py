@@ -1,6 +1,7 @@
 from PIL import Image
 import sys
 import random
+import time
 
 image1 = Image.open("hf1.jpg")
 image1 = image1.convert('CMYK')
@@ -15,6 +16,7 @@ image3 = image3.convert('CMYK')
 share1 = Image.new("CMYK", [dimension * 2 for dimension in image1.size])
 share2 = Image.new("CMYK", [dimension * 2 for dimension in image2.size])
 
+begin = time.time()
 
 for x in range(0, image1.size[0]):
     for y in range(0, image1.size[1]):
@@ -139,6 +141,9 @@ for x in range(0, image1.size[0]):
                 share1.putpixel((x * 2, y * 2 + 1), (0,255,0,0))
                 share1.putpixel((x * 2 + 1, y * 2 + 1), (255,0,0,0))
 
+final = time.time()
+
+print('Spend:', final-begin, 'secs.')
 
 share1.save('method2_share1.jpg')
 share2.save('method2_share2.jpg')

@@ -4,7 +4,7 @@ import random
 import sys
 
 
-image = Image.open("./Lenna.jpg")
+image = Image.open("./Lenna.jpeg")
 color_image = image.convert('CMYK')
 
 

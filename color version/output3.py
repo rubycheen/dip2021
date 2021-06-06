@@ -1,4 +1,3 @@
-from method3 import Y_new
 from PIL import Image
 import sys
 
