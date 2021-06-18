@@ -1,6 +1,6 @@
 ## Goal
 
-The project is to implement visual crypotography for color images.
+The project is to implement visual crypotography for gray images and color images.
 We compare three different methods to crypoto color images.
 
 ## Reference
